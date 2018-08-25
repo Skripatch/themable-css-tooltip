@@ -1,0 +1,195 @@
+/**
+    Configurable variables - feel free to change as needed
+ */
+.tooltip {
+    --tooltip-spacing-base: 2px;
+    --tooltip-multiline-width: 20em;
+    --tooltip-font-size: 1em;
+    --tooltip-font-family: Arial, 'Helvetica', sans-serif;
+    --tooltip-background-color: black;
+    --tooltip-border-color: red;
+    --tooltip-border-width: var(--tooltip-spacing-base);
+    --tooltip-border-style: solid;
+    --tooltip-border-radius: calc(var(--tooltip-spacing-base) * 2);
+    --tooltip-shadow-color: rgba(0,0,0,0.8);
+    --tooltip-shadow-x: 0px;
+    --tooltip-shadow-y: 0px;
+    --tooltip-shadow-spread: 5px;
+    --tooltip-shadow-size: 0px;
+    --tooltip-color: white;
+    --tooltip-triangle-size: 12px;
+}
+
+/**
+    Calculated variables - don`t touch until you understand what they do
+ */
+.tooltip {
+    --tooltip-triangle-size-negative: calc(var(--tooltip-triangle-size) * -1);
+    --tooltip-arrow-size: calc(var(--tooltip-triangle-size) / 2);
+    --tooltip-arrow-size-negative: calc(var(--tooltip-triangle-size-negative) / 2);
+}
+
+/**
+    example - this is how you add theme overrides
+ */
+.tooltip.olive,
+.olive .tooltip {
+    --tooltip-background-color: olive;
+    --tooltip-shadow-spread: 1px;
+}
+
+
+/**
+    mini - small version of the tooltip (all the spacings are half size)
+ */
+.tooltip.mini {
+    --tooltip-font-size: 0.6em;
+    --tooltip-spacing-base: 1px;
+    --tooltip-shadow-spread: 2px;
+    --tooltip-triangle-size: 8px;
+}
+
+.tooltip[alt] {
+    position: relative;
+    display: inline-block;
+    color: red;
+    font-weight: bold;
+}
+
+.tooltip[alt]:before,
+.tooltip[alt]:after {
+    position: absolute;
+    opacity: 0;
+    background: var(--tooltip-background-color);
+    box-shadow: var(--tooltip-shadow-x) var(--tooltip-shadow-y) var(--tooltip-shadow-spread) var(--tooltip-shadow-color);
+    transition: all 0.2s ease-in-out;
+    transform-origin: center;
+    pointer-events: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.tooltip[alt]:after {
+    content: attr(alt);
+    white-space: nowrap;
+    font-size: var(--tooltip-font-size);
+    font-weight: 100;
+    font-family: var(--tooltip-font-family);
+    padding: calc(var(--tooltip-spacing-base) * 4) calc(var(--tooltip-spacing-base) * 8);
+    border-radius: var(--tooltip-border-radius);
+    color: var(--tooltip-color);
+    transition-delay: 0.2s;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.tooltip[alt]:before {
+    transition-delay: 0s;
+    width: var(--tooltip-triangle-size);
+    height: var(--tooltip-triangle-size);
+    z-index: 1;
+}
+.tooltip[alt]:hover:before {
+    transition-delay: 0.3s;
+}
+
+/**
+    fixed width - allows multiline and wrapping content
+ */
+.tooltip.fixed[alt]:after {
+    width: var(--tooltip-multiline-width);
+    white-space: pre-wrap;
+}
+
+.tooltip[alt]:hover:before,
+.tooltip[alt]:hover:after {
+    opacity: 1;
+}
+
+.tooltip[alt].north:after {
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, var(--tooltip-triangle-size));
+}
+
+.tooltip[alt].north:hover:after {
+    opacity: 1;
+    transform: translate(-50%, var(--tooltip-triangle-size-negative));
+}
+.tooltip.north[alt]:before {
+    content: '';
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, var(--tooltip-triangle-size-negative)) rotate(-45deg);
+}
+.tooltip.north[alt]:hover:before {
+    transform: translate(-50%, var(--tooltip-arrow-size-negative)) rotate(-45deg);
+}
+
+.tooltip.east[alt]:after {
+    top: 50%;
+    left: 100%;
+    transform: translate(var(--tooltip-triangle-size-negative), -50%);
+}
+
+.tooltip.east[alt]:hover:after {
+    transform: translate(var(--tooltip-triangle-size), -50%);
+}
+.tooltip.east[alt]:before {
+    content: '';
+    top: 50%;
+    left: 100%;
+    transform: translate(var(--tooltip-triangle-size), -50%) rotate(-45deg);
+}
+.tooltip.east[alt]:hover:before {
+    transform: translate(var(--tooltip-arrow-size), -50%) rotate(-45deg);
+}
+
+
+.tooltip.south[alt]:after {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, var(--tooltip-triangle-size-negative));
+}
+
+.tooltip.south[alt]:hover:after {
+    transform: translate(-50%, var(--tooltip-triangle-size));
+}
+
+.tooltip.south[alt]:before {
+    content: '';
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, var(--tooltip-triangle-size)) rotate(-45deg);
+}
+.tooltip.south[alt]:hover:before {
+    transform: translate(-50%, var(--tooltip-arrow-size)) rotate(-45deg);
+}
+
+.tooltip.west[alt]:after {
+    top: 50%;
+    right: 100%;
+    transform: translate(var(--tooltip-triangle-size), -50%);
+}
+
+.tooltip.west[alt]:hover:after {
+    transform: translate(var(--tooltip-triangle-size-negative), -50%);
+}
+
+.tooltip.west[alt]:before {
+    content: '';
+    top: 50%;
+    right: 100%;
+    transform: translate(var(--tooltip-triangle-size-negative), -50%) rotate(-45deg);
+}
+.tooltip.west[alt]:hover:before {
+    transform: translate(var(--tooltip-arrow-size-negative), -50%) rotate(-45deg);
+}
+
+
+/**
+    sticky - the tooltip won`t disappear while hovered
+ */
+.tooltip.sticky[alt]:after,
+.tooltip.sticky[alt]:before {
+    pointer-events: all;
+}
