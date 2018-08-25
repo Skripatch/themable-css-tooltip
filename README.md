@@ -5,7 +5,9 @@ Fully customizable/themable tooltip written in pure CSS only.
 Internet Explorer does not support the var() function. Consider using a polyfill.
 
 ### Overview
-**themable-css-tooltip** is a pure CSS implementation of tooltip functionality for web apps/sites. This allows for easier configuration and theming.
+**themable-css-tooltip** is a pure CSS implementation of tooltip functionality for web apps/sites.
+This allows for easier configuration and theming.
+The text show in the tooltip is placed in the **alt** attribute of the html element in order to automatically expose it to screenreaders/narrators and alternative image content.
 
 It exposes a series of css classes to enable features and control positioning.
 
@@ -34,19 +36,19 @@ It exposes a series of css classes to enable features and control positioning.
 **.west** - positions the tooltip on the element`s left side
 
 ### Configuration
-* --tooltip-spacing-base: 2px;
-* --tooltip-multiline-width: 20em;
-* --tooltip-font-size: 1em;
-* --tooltip-font-family: Arial, 'Helvetica', sans-serif;
-* --tooltip-background-color: black;
-* --tooltip-border-color: red;
-* --tooltip-border-width: var(--tooltip-spacing-base);
-* --tooltip-border-style: solid;
-* --tooltip-border-radius: calc(var(--tooltip-spacing-base) * 2);
-* --tooltip-shadow-color: rgba(0,0,0,0.8);
-* --tooltip-shadow-x: 0px;
-* --tooltip-shadow-y: 0px;
-* --tooltip-shadow-spread: 5px;
-* --tooltip-shadow-size: 0px;
-* --tooltip-color: white;
-* --tooltip-triangle-size: 12px;
+* **--tooltip-spacing-base** - the common multiplier for all spacing values
+* **--tooltip-multiline-width** - fixed width value for multiline tooltips
+* **--tooltip-font-size** - the tooltip`s font size
+* **--tooltip-font-family** - the tooltip`s font family
+* **--tooltip-background-color** - the background color
+* **--tooltip-border-color** - border color
+* **--tooltip-border-width** - border width
+* **--tooltip-border-style** - border style
+* **--tooltip-border-radius** - border radius
+* **--tooltip-shadow-color** - shadow color
+* **--tooltip-shadow-x** - shadow horizontal offset
+* **--tooltip-shadow-y** - shadow vertical offset
+* **--tooltip-shadow-spread** - shadow spread
+* **--tooltip-shadow-size** - shadow size
+* **--tooltip-color** - the text color
+* **--tooltip-triangle-size** - triangle size
