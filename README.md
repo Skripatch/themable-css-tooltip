@@ -23,17 +23,17 @@ It exposes a series of css classes to enable features and control positioning.
 ```
 ### Features
 
-**.fixed** - makes the tooltip width fixed (see --tooltip-multiline-width variable in configuration section)
+* **.fixed** - makes the tooltip width fixed (see --tooltip-multiline-width variable in configuration section)
 
-**.sticky** - forces the tooltip to appear while hovered
+* **.sticky** - forces the tooltip to appear while hovered
 
-**.mini** - smaller version of the tooltip
+* **.mini** - smaller version of the tooltip
 
 ### Positioning
-**.north** - positions the tooltip above the element
-**.east** - positions the tooltip on the right side
-**.south** - positions the tooltip below the element
-**.west** - positions the tooltip on the left side
+* **.north** - positions the tooltip above the element
+* **.east** - positions the tooltip on the right side
+* **.south** - positions the tooltip below the element
+* **.west** - positions the tooltip on the left side
 
 ### Configuration
 * **--tooltip-spacing-base** - the common multiplier for all spacing values
