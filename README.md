@@ -51,8 +51,8 @@ It exposes a series of css classes to enable features and control positioning.
 * **--tooltip-shadow-color** - shadow color
 * **--tooltip-shadow-x** - shadow horizontal offset
 * **--tooltip-shadow-y** - shadow vertical offset
-* **--tooltip-shadow-spread** - shadow spread
-* **--tooltip-shadow-size** - shadow size
+* **--tooltip-shadow-blur** - shadow blur radius
+* **--tooltip-shadow-spread** - shadow spread value
 * **--tooltip-color** - the text color
 * **--tooltip-triangle-size** - triangle size
 

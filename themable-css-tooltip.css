@@ -14,8 +14,8 @@
     --tooltip-shadow-color: rgba(0,0,0,0.8);
     --tooltip-shadow-x: 0px;
     --tooltip-shadow-y: 0px;
-    --tooltip-shadow-spread: 5px;
-    --tooltip-shadow-size: 0px;
+    --tooltip-shadow-blur: 5px;
+    --tooltip-shadow-spread: 0px;
     --tooltip-color: white;
     --tooltip-triangle-size: 12px;
 }
@@ -35,7 +35,7 @@
 .tooltip.olive,
 .olive .tooltip {
     --tooltip-background-color: olive;
-    --tooltip-shadow-spread: 1px;
+    --tooltip-shadow-blur: 1px;
 }
 
 
@@ -45,7 +45,7 @@
 .tooltip.mini {
     --tooltip-font-size: 0.6em;
     --tooltip-spacing-base: 1px;
-    --tooltip-shadow-spread: 2px;
+    --tooltip-shadow-blur: 2px;
     --tooltip-triangle-size: 8px;
 }
 
@@ -61,7 +61,7 @@
     position: absolute;
     opacity: 0;
     background: var(--tooltip-background-color);
-    box-shadow: var(--tooltip-shadow-x) var(--tooltip-shadow-y) var(--tooltip-shadow-spread) var(--tooltip-shadow-color);
+    box-shadow: var(--tooltip-shadow-x) var(--tooltip-shadow-y) var(--tooltip-shadow-blur) var(--tooltip-shadow-color);
     transition: all 0.2s ease-in-out;
     transform-origin: center;
     pointer-events: none;
