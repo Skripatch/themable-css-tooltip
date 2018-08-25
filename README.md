@@ -20,8 +20,11 @@ It exposes a series of css classes to enable features and control positioning.
     </div>
 ```
 ### Features
+
 **.fixed** - makes the tooltip width fixed (see --tooltip-multiline-width variable in configuration section)
+
 **.sticky** - forces the tooltip to appear while hovered
+
 **.mini** - smaller version of the tooltip
 
 ### Positioning
