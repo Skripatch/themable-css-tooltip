@@ -31,9 +31,9 @@ It exposes a series of css classes to enable features and control positioning.
 
 ### Positioning
 **.north** - positions the tooltip above the element
-**.east** - positions the tooltip on the element`s right side
+**.east** - positions the tooltip on the right side
 **.south** - positions the tooltip below the element
-**.west** - positions the tooltip on the element`s left side
+**.west** - positions the tooltip on the left side
 
 ### Configuration
 * **--tooltip-spacing-base** - the common multiplier for all spacing values
