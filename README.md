@@ -59,5 +59,7 @@ It exposes a series of css classes to enable features and control positioning.
 * **--tooltip-shadow-spread** - shadow spread value
 * **--tooltip-color** - the text color
 * **--tooltip-triangle-size** - triangle size
+* **--tooltip-padding-vertical** - vertical padding
+* **--tooltip-padding-horizontal** - horizontal padding;
 
 Check out the [DEMO PAGE](https://skripatch.github.io/themable-css-tooltip/)
