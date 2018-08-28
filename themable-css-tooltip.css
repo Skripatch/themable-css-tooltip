@@ -2,7 +2,7 @@
     Configurable variables - feel free to change as needed
  */
 .tooltip {
-    --tooltip-spacing-base: 2px;
+    --tooltip-spacing-base: 1px;
     --tooltip-multiline-width: 20em;
     --tooltip-font-size: 14px;
     --tooltip-font-family: Arial, 'Helvetica', sans;
@@ -17,7 +17,7 @@
     --tooltip-shadow-blur: 5px;
     --tooltip-shadow-spread: 0px;
     --tooltip-color: #DCDCDC;
-    --tooltip-triangle-size: 12px;
+    --tooltip-triangle-size: 8px;
 }
 
 /**
