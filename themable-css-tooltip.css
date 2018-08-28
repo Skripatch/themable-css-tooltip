@@ -10,7 +10,7 @@
     --tooltip-border-color: #40a6ff;
     --tooltip-border-width: var(--tooltip-spacing-base);
     --tooltip-border-style: solid;
-    --tooltip-border-radius: calc(var(--tooltip-spacing-base) * 2);
+    --tooltip-border-radius: calc(var(--tooltip-spacing-base) * 4);
     --tooltip-shadow-color: rgba(0, 0, 0, 0.8);
     --tooltip-shadow-x: 0px;
     --tooltip-shadow-y: 0px;
