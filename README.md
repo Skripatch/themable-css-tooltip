@@ -29,6 +29,10 @@ It exposes a series of css classes to enable features and control positioning.
 
 **.mini** - smaller version of the tooltip
 
+**.round** - half a sphere round borders
+
+**.border** - shows border line
+
 ### Positioning
 **.north** - positions the tooltip above the element
 
