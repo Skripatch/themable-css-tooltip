@@ -2,7 +2,7 @@
     Configurable variables - feel free to change as needed
  */
 .tooltip {
-    --tooltip-spacing-base: 1px;
+    --tooltip-spacing-base: 2px;
     --tooltip-multiline-width: 20em;
     --tooltip-font-size: 14px;
     --tooltip-font-family: Arial, 'Helvetica', sans;
@@ -88,7 +88,7 @@
     font-size: var(--tooltip-font-size);
     font-weight: 100;
     font-family: var(--tooltip-font-family);
-    padding: calc(var(--tooltip-spacing-base) * 4) calc(var(--tooltip-spacing-base) * 8);
+    padding: calc(var(--tooltip-spacing-base) * 6) calc(var(--tooltip-spacing-base) * 12);
     border-radius: var(--tooltip-border-radius);
     color: var(--tooltip-color);
     transition-delay: 0.2s;
