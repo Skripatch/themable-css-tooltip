@@ -97,6 +97,7 @@
     z-index: 1;
     box-sizing: border-box;
     -webkit-font-smoothing: subpixel-antialiased;
+    will-change: opacity;
 }
 
 .tooltip[alt]:before {
